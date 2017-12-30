@@ -1,0 +1,1091 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Fake_PhotoShop (v1.0.6)</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/icons/icons/mainWindow_128px.ico</normaloff>:/icons/icons/mainWindow_128px.ico</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="3" column="0">
+     <widget class="QSlider" name="scalePicture">
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="maximum">
+       <number>100</number>
+      </property>
+      <property name="value">
+       <number>40</number>
+      </property>
+      <property name="sliderPosition">
+       <number>40</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QScrollBar" name="VMovePicture">
+      <property name="cursor">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <property name="minimum">
+       <number>-50</number>
+      </property>
+      <property name="maximum">
+       <number>50</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QScrollBar" name="HMovePicture">
+      <property name="cursor">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="minimum">
+       <number>-50</number>
+      </property>
+      <property name="maximum">
+       <number>50</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QWidget" name="widget" native="true">
+      <property name="styleSheet">
+       <string notr="true">/*background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(192, 192, 192, 255), stop:1 rgba(153, 153, 153, 95));*/
+background-color: rgb(42, 42, 42);
+</string>
+      </property>
+      <widget class="QLabel" name="label_picture">
+       <property name="geometry">
+        <rect>
+         <x>6</x>
+         <y>6</y>
+         <width>0</width>
+         <height>0</height>
+        </rect>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>黑体</family>
+         <pointsize>24</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>CrossCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>请打开一张图片</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QWidget" name="widget_Brightness" native="true">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>120</y>
+         <width>400</width>
+         <height>300</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>400</width>
+         <height>300</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>400</width>
+         <height>300</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 4px;
+background-color: rgb(183, 183, 183, 207);
+/*border:2px solid lightblue;;
+venus--TitleBar{background-color:#000000;color:#ffffff}*/</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="1" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <widget class="QLabel" name="picture_preview_Brightness">
+              <property name="minimumSize">
+               <size>
+                <width>350</width>
+                <height>220</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>350</width>
+                <height>220</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(, , , 255);
+border-radius: 0px;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <item>
+               <widget class="QToolButton" name="close_Brightness">
+                <property name="minimumSize">
+                 <size>
+                  <width>120</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border-radius: 1px;
+background-color: rgba(223, 223, 223, 207);</string>
+                </property>
+                <property name="text">
+                 <string>关闭</string>
+                </property>
+                <property name="arrowType">
+                 <enum>Qt::NoArrow</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="apply_Brightness">
+                <property name="minimumSize">
+                 <size>
+                  <width>120</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border-radius: 1px;
+background-color: rgba(223, 223, 223, 207);</string>
+                </property>
+                <property name="text">
+                 <string>应用</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QDoubleSpinBox" name="doubleSpinBox_Brightness">
+                <property name="minimumSize">
+                 <size>
+                  <width>80</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>113</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border-radius: 1px;
+background-color: rgba(255, 255, 255, 255);</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="minimum">
+                 <double>0.010000000000000</double>
+                </property>
+                <property name="maximum">
+                 <double>0.990000000000000</double>
+                </property>
+                <property name="singleStep">
+                 <double>0.070000000000000</double>
+                </property>
+                <property name="value">
+                 <double>0.500000000000000</double>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <widget class="QSlider" name="Slider_Brightness">
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="singleStep">
+               <number>2</number>
+              </property>
+              <property name="pageStep">
+               <number>7</number>
+              </property>
+              <property name="value">
+               <number>50</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>30</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="preview_title_Brightness">
+          <property name="font">
+           <font>
+            <family>Adobe Arabic</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-radius: 0px;
+background-color: rgb(183, 183, 183, 0);</string>
+          </property>
+          <property name="text">
+           <string>亮度调节</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="widget_Contrast" native="true">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>170</y>
+         <width>400</width>
+         <height>300</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>400</width>
+         <height>300</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>400</width>
+         <height>300</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 4px;
+background-color: rgb(183, 183, 183, 207);
+/*border:2px solid lightblue;;
+venus--TitleBar{background-color:#000000;color:#ffffff}*/</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="1" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <widget class="QLabel" name="picture_preview_Contrast">
+              <property name="minimumSize">
+               <size>
+                <width>350</width>
+                <height>220</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>350</width>
+                <height>220</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(, , , 255);
+border-radius: 0px;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <item>
+               <widget class="QToolButton" name="close_Contrast">
+                <property name="minimumSize">
+                 <size>
+                  <width>120</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border-radius: 1px;
+background-color: rgba(223, 223, 223, 207);</string>
+                </property>
+                <property name="text">
+                 <string>关闭</string>
+                </property>
+                <property name="arrowType">
+                 <enum>Qt::NoArrow</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="apply_Contrast">
+                <property name="minimumSize">
+                 <size>
+                  <width>120</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border-radius: 1px;
+background-color: rgba(223, 223, 223, 207);</string>
+                </property>
+                <property name="text">
+                 <string>应用</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QDoubleSpinBox" name="doubleSpinBox_Contrast">
+                <property name="minimumSize">
+                 <size>
+                  <width>80</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>113</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border-radius: 1px;
+background-color: rgba(255, 255, 255, 255);</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="minimum">
+                 <double>0.010000000000000</double>
+                </property>
+                <property name="maximum">
+                 <double>0.990000000000000</double>
+                </property>
+                <property name="singleStep">
+                 <double>0.070000000000000</double>
+                </property>
+                <property name="value">
+                 <double>0.500000000000000</double>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <item>
+             <widget class="QSlider" name="Slider_Contrast">
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="singleStep">
+               <number>2</number>
+              </property>
+              <property name="pageStep">
+               <number>7</number>
+              </property>
+              <property name="value">
+               <number>50</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>30</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="preview_title_Contrast">
+          <property name="font">
+           <font>
+            <family>Adobe Arabic</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-radius: 0px;
+background-color: rgb(183, 183, 183, 0);</string>
+          </property>
+          <property name="text">
+           <string>对比度调节</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="widget_Monochrome" native="true">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>80</y>
+         <width>400</width>
+         <height>300</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>400</width>
+         <height>300</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>400</width>
+         <height>300</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 4px;
+background-color: rgb(183, 183, 183, 207);
+/*border:2px solid lightblue;;
+venus--TitleBar{background-color:#000000;color:#ffffff}*/</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="1" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_9">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_8">
+            <item>
+             <widget class="QLabel" name="picture_preview_Monochrome">
+              <property name="minimumSize">
+               <size>
+                <width>350</width>
+                <height>220</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>350</width>
+                <height>220</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(, , , 255);
+border-radius: 0px;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_10">
+              <item>
+               <widget class="QToolButton" name="close_Monochrome">
+                <property name="minimumSize">
+                 <size>
+                  <width>120</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border-radius: 1px;
+background-color: rgba(223, 223, 223, 207);</string>
+                </property>
+                <property name="text">
+                 <string>关闭</string>
+                </property>
+                <property name="arrowType">
+                 <enum>Qt::NoArrow</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="apply_Monochrome">
+                <property name="minimumSize">
+                 <size>
+                  <width>120</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border-radius: 1px;
+background-color: rgba(223, 223, 223, 207);</string>
+                </property>
+                <property name="text">
+                 <string>应用</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="spinBox_Monochrome">
+                <property name="minimumSize">
+                 <size>
+                  <width>80</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>113</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border-radius: 1px;
+background-color: rgba(255, 255, 255, 255);</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="maximum">
+                 <number>256</number>
+                </property>
+                <property name="singleStep">
+                 <number>4</number>
+                </property>
+                <property name="value">
+                 <number>128</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_9">
+            <item>
+             <widget class="QSlider" name="Slider_Monochrome">
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+              </property>
+              <property name="minimum">
+               <number>0</number>
+              </property>
+              <property name="maximum">
+               <number>256</number>
+              </property>
+              <property name="singleStep">
+               <number>4</number>
+              </property>
+              <property name="pageStep">
+               <number>16</number>
+              </property>
+              <property name="value">
+               <number>128</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_4">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>30</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="preview_title_Monochrome">
+          <property name="font">
+           <font>
+            <family>Adobe Arabic</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-radius: 0px;
+background-color: rgb(183, 183, 183, 0);</string>
+          </property>
+          <property name="text">
+           <string>黑白处理</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>菜单(&amp;F)</string>
+    </property>
+    <addaction name="action_File_Open"/>
+    <addaction name="action_File_Save"/>
+    <addaction name="action_File_Quit"/>
+   </widget>
+   <widget class="QMenu" name="menu_Edit">
+    <property name="title">
+     <string>编辑(&amp;E)</string>
+    </property>
+    <addaction name="action_Edit_Convert8toMonochrome"/>
+    <addaction name="action_Edit_Brightness"/>
+    <addaction name="action_Edit_Contrast"/>
+    <addaction name="action_Edit_GrayProcess24"/>
+    <addaction name="action_Edit_Smooth4"/>
+    <addaction name="action_Edit_Smooth8"/>
+    <addaction name="action_Edit_FlipHorizontal"/>
+    <addaction name="action_Edit_FlipVertical"/>
+    <addaction name="action_Edit_ConvertToTxt"/>
+    <addaction name="action_Edit_InverseColor"/>
+    <addaction name="action_Edit_Convert24to256"/>
+    <addaction name="action_Edit_Revert"/>
+   </widget>
+   <widget class="QMenu" name="menu_Help">
+    <property name="title">
+     <string>帮助(&amp;H)</string>
+    </property>
+    <addaction name="action_Help_About"/>
+   </widget>
+   <widget class="QMenu" name="menu_W">
+    <property name="title">
+     <string>窗口(&amp;W)</string>
+    </property>
+    <addaction name="action_Win_content_fix"/>
+    <addaction name="action_Win_window_fix"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menu_Edit"/>
+   <addaction name="menu_W"/>
+   <addaction name="menu_Help"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_File_Open"/>
+   <addaction name="action_File_Save"/>
+   <addaction name="separator"/>
+   <addaction name="action_Win_content_fix"/>
+   <addaction name="action_Win_window_fix"/>
+   <addaction name="action_Edit_Revert"/>
+   <addaction name="separator"/>
+   <addaction name="action_Edit_Convert8toMonochrome"/>
+   <addaction name="action_Edit_Brightness"/>
+   <addaction name="action_Edit_Contrast"/>
+   <addaction name="action_Edit_GrayProcess24"/>
+   <addaction name="action_Edit_Smooth4"/>
+   <addaction name="action_Edit_Smooth8"/>
+   <addaction name="action_Edit_FlipHorizontal"/>
+   <addaction name="action_Edit_FlipVertical"/>
+   <addaction name="action_Edit_ConvertToTxt"/>
+   <addaction name="action_Edit_InverseColor"/>
+   <addaction name="action_Edit_Convert24to256"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="action_File_Open">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/folder_open_128px.ico</normaloff>:/icons/icons/folder_open_128px.ico</iconset>
+   </property>
+   <property name="text">
+    <string>打开(O)</string>
+   </property>
+   <property name="statusTip">
+    <string>打开新的图片文件.</string>
+   </property>
+   <property name="whatsThis">
+    <string/>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="action_File_Save">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/save_128px_.ico</normaloff>:/icons/icons/save_128px_.ico</iconset>
+   </property>
+   <property name="text">
+    <string>保存(S)</string>
+   </property>
+   <property name="statusTip">
+    <string>另存当前的图片处理文件.</string>
+   </property>
+   <property name="whatsThis">
+    <string/>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="action_File_Quit">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/exit_128px.ico</normaloff>:/icons/icons/exit_128px.ico</iconset>
+   </property>
+   <property name="text">
+    <string>退出(Q)</string>
+   </property>
+   <property name="statusTip">
+    <string>退出程序.</string>
+   </property>
+   <property name="whatsThis">
+    <string/>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="action_Help_About">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/about_128px.ico</normaloff>:/icons/icons/about_128px.ico</iconset>
+   </property>
+   <property name="text">
+    <string>关于</string>
+   </property>
+   <property name="statusTip">
+    <string>关于此程序的信息.</string>
+   </property>
+  </action>
+  <action name="action_Win_content_fix">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/fix_content_128px.ico</normaloff>:/icons/icons/fix_content_128px.ico</iconset>
+   </property>
+   <property name="text">
+    <string>适应内容</string>
+   </property>
+   <property name="statusTip">
+    <string>保证最佳的内容显示效果.</string>
+   </property>
+  </action>
+  <action name="action_Win_window_fix">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/fix_window_128px.ico</normaloff>:/icons/icons/fix_window_128px.ico</iconset>
+   </property>
+   <property name="text">
+    <string>适应窗口</string>
+   </property>
+   <property name="statusTip">
+    <string>将图片缩放至窗口大小.</string>
+   </property>
+  </action>
+  <action name="action_Edit_GrayProcess24">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/greyProcess_128px.ico</normaloff>:/icons/icons/greyProcess_128px.ico</iconset>
+   </property>
+   <property name="text">
+    <string>灰度处理</string>
+   </property>
+   <property name="statusTip">
+    <string>对图片进行灰度处理.</string>
+   </property>
+  </action>
+  <action name="action_Edit_Smooth4">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/Smooth4_128px.ico</normaloff>:/icons/icons/Smooth4_128px.ico</iconset>
+   </property>
+   <property name="text">
+    <string>4-邻域平滑</string>
+   </property>
+   <property name="statusTip">
+    <string>对图片进行4-邻域平滑处理.</string>
+   </property>
+  </action>
+  <action name="action_Edit_Smooth8">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/Smooth8_128px.ico</normaloff>:/icons/icons/Smooth8_128px.ico</iconset>
+   </property>
+   <property name="text">
+    <string>8-邻域平滑</string>
+   </property>
+   <property name="statusTip">
+    <string>对图片进行8-邻域平滑处理.</string>
+   </property>
+  </action>
+  <action name="action_Edit_FlipHorizontal">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/flip_horizontal_128px.ico</normaloff>:/icons/icons/flip_horizontal_128px.ico</iconset>
+   </property>
+   <property name="text">
+    <string>水平翻转</string>
+   </property>
+   <property name="statusTip">
+    <string>对图片做水平方向的翻转.</string>
+   </property>
+  </action>
+  <action name="action_Edit_FlipVertical">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/flip_vertical_128.ico</normaloff>:/icons/icons/flip_vertical_128.ico</iconset>
+   </property>
+   <property name="text">
+    <string>垂直翻转</string>
+   </property>
+   <property name="statusTip">
+    <string>对图片做垂直方向的翻转.</string>
+   </property>
+  </action>
+  <action name="action_Edit_Brightness">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/brightness_128px.ico</normaloff>:/icons/icons/brightness_128px.ico</iconset>
+   </property>
+   <property name="text">
+    <string>亮度调节</string>
+   </property>
+   <property name="statusTip">
+    <string>对图片进行亮度调节，调节系数介于(0,1).</string>
+   </property>
+  </action>
+  <action name="action_Edit_Contrast">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/Contrast_128px_.ico</normaloff>:/icons/icons/Contrast_128px_.ico</iconset>
+   </property>
+   <property name="text">
+    <string>对比度调节</string>
+   </property>
+   <property name="statusTip">
+    <string>对图片进行对比度调节，调节系数介于(0,1).</string>
+   </property>
+  </action>
+  <action name="action_Edit_Convert24to256">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/24to8bit.png</normaloff>:/icons/icons/24to8bit.png</iconset>
+   </property>
+   <property name="text">
+    <string>24位色转256色</string>
+   </property>
+   <property name="statusTip">
+    <string>将24位真彩色图片转为8位256色图片.</string>
+   </property>
+  </action>
+  <action name="action_Edit_Convert8toMonochrome">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/Monochrome_128px.ico</normaloff>:/icons/icons/Monochrome_128px.ico</iconset>
+   </property>
+   <property name="text">
+    <string>黑白处理</string>
+   </property>
+   <property name="statusTip">
+    <string>对图片进行二值化(黑白)处理，调节系数介于[0,256].</string>
+   </property>
+  </action>
+  <action name="action_Edit_Revert">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/renew_128px.ico</normaloff>:/icons/icons/renew_128px.ico</iconset>
+   </property>
+   <property name="text">
+    <string>恢复原图</string>
+   </property>
+   <property name="statusTip">
+    <string>恢复原始图片.</string>
+   </property>
+  </action>
+  <action name="action_Edit_ConvertToTxt">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/txt_128px.ico</normaloff>:/icons/icons/txt_128px.ico</iconset>
+   </property>
+   <property name="text">
+    <string>转换为TXT</string>
+   </property>
+   <property name="statusTip">
+    <string>将图片转换为ASCII字符表示的TXT文件.</string>
+   </property>
+  </action>
+  <action name="action_Edit_InverseColor">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/inverseColor_128px.net.ico</normaloff>:/icons/icons/inverseColor_128px.net.ico</iconset>
+   </property>
+   <property name="text">
+    <string>反色处理</string>
+   </property>
+   <property name="statusTip">
+    <string>对图片进行反色处理.</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

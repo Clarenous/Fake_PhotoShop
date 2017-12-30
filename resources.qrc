@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>icons/exit_128px.ico</file>
+        <file>icons/fix_content_128px.ico</file>
+        <file>icons/fix_window_128px.ico</file>
+        <file>icons/flip_horizontal_128px.ico</file>
+        <file>icons/flip_vertical_128.ico</file>
+        <file>icons/folder_open_128px.ico</file>
+        <file>icons/greyProcess_128px.ico</file>
+        <file>icons/save_128px_.ico</file>
+        <file>icons/Smooth4_128px.ico</file>
+        <file>icons/Smooth8_128px.ico</file>
+        <file>icons/about_128px.ico</file>
+        <file>icons/brightness_128px.ico</file>
+        <file>icons/Contrast_128px_.ico</file>
+        <file>icons/inverseColor_128px.net.ico</file>
+        <file>icons/Monochrome_128px.ico</file>
+        <file>icons/renew_128px.ico</file>
+        <file>icons/txt_128px.ico</file>
+        <file>icons/zip.png</file>
+        <file>icons/UNZIP.png</file>
+        <file>icons/mainWindow_128px.ico</file>
+        <file>icons/24to8bit.png</file>
+    </qresource>
+</RCC>
