@@ -9,4 +9,5 @@
 运行“fake_PhotoShop.exe”前，先执行“初始化软件.bat”，这将在目录中创建“cmd_copy.exe”。
 
 Author: Clarenous
+
 Date: 2017.12.30
