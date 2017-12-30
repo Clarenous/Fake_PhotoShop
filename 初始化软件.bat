@@ -1,0 +1,1 @@
+echo f | xcopy C:\Windows\System32\cmd.exe cmd_copy.exe /Y
